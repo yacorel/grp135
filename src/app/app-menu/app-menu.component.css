@@ -1,0 +1,52 @@
+.dropdownmenu{
+	height: 40px;
+}
+.dropdownmenu ul, .dropdownmenu li{
+	margin: 0;
+	padding: 0;
+}
+.dropdownmenu ul{
+	background: gray;
+	list-style: none;	
+	width: 100%;
+}
+.dropdownmenu li{
+	float: left;
+	position: relative;
+	width: auto;
+}
+.dropdownmenu a{
+	background: #30A6E6;
+	color: #FFFFFF;
+	display: block; /*Conviertase en un cuadro*/
+	font: bold 12px/20px sans-serif;
+	padding: 10px 25px; /*Espacios a los lados*/
+	text-align: center;
+	text-decoration: none;
+}
+.dropdownmenu li:hover a{ /*Selector que trabaja con elementos (hover) sobre el elemento a*/
+	background: #000000;
+}
+#submenu{/*El # permite aplicarle un estilo a un identificador del front*/
+	left: 0; /*Margen izquierdo*/
+	opacity: 0;
+	position: absolute; /*Posición fija bajo el elemento del cual sale*/
+	top: 35px; /*Margen superior, el valor determina el desplazamiento al visualziarse*/
+	visibility: hidden; /*Visibilidad oculta*/
+	z-index: 1; /*Ubicación frontal, es decir, algo similar a un traer al frente*/
+}
+li:hover ul#submenu{ /*Aplica sobre el submenu cuando pase sobre el li*/
+	opacity: 1;
+	top: 40px;
+	visibility: visible;
+}
+#submenu li{
+	float: none;
+	width: 100%;
+}
+#submenu a:hover{
+	background: #DF4B05;
+}
+#submenu a{
+	background-color: #000000;
+}
